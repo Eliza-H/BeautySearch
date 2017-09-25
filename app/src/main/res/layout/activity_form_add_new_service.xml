@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="elizah.springbootandroid.FormAddNewService">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/fab"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="bottom|end"-->
+        <!--android:layout_margin="16dp"-->
+        <!--app:srcCompat="@android:drawable/ic_dialog_email" />-->
+
+    <Button
+        android:id="@+id/addService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:onClick="onAddService"
+        app:layout_anchor="@+id/include"
+        app:layout_anchorGravity="center_vertical|center_horizontal" />
+    <EditText
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="75dp"
+        android:layout_gravity="left"
+        android:ems="10"
+        app:layout_anchor="@+id/include" />
+
+
+    <EditText
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="20dp"
+        android:ems="10"
+        app:layout_anchor="@+id/include" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="20dp"
+        app:layout_anchor="@+id/include" />
+
+    <RelativeLayout
+        style="@style/GenericProgressBackground"
+        android:id="@+id/loadingPanel"
+        android:visibility="invisible"
+        >
+        <ProgressBar
+            style="@style/GenericProgressIndicator" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/content_form_add_new_service" />
+
+
+</android.support.design.widget.CoordinatorLayout>
